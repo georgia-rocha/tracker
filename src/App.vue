@@ -18,8 +18,8 @@ export default defineComponent({
       <BarraLateral />
     </div>
     <div class="column is-three-quarter">
-    </div>
       <Form />
+    </div>
   </main>
 </template>
 
