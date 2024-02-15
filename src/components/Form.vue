@@ -14,7 +14,7 @@
           placeholder="Qual tarefa você deseja iniciar?"
         />
         <div class="column">
-         <Temporizador />
+         <Temporizador @tempFinished="finalizarTarefa" />
         </div>
       </div>
     </div>
@@ -30,6 +30,12 @@ export default defineComponent({
   components: {
     Temporizador
   },
+  methods: {
+    finalizarTarefa (tempoDecorrido: number): void {
+      console.log('tempo da tarefa', tempoDecorrido);
+      
+    }
+  }
   
 });
 </script>
