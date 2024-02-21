@@ -40,6 +40,7 @@ export default defineComponent({
     finalizarTarefa (tempoDecorrido: number): void {
       console.log('tempo da tarefa', tempoDecorrido);
       console.log('descrição da tarefa', this.description);
+      this.description = ''
     }
   }
   
