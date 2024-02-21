@@ -1,8 +1,8 @@
 <template>
   <div class="box">
     <div class="tarefa">
-      <h1 class="">Descrição da Tarefa</h1>
-      <Cronometro :tempoEmSegundos="15" />
+      <h1 class="">{{tarefa.description}}</h1>
+      <Cronometro :tempoEmSegundos="tarefa.duracaoEmSegundos" />
     </div>
   </div>
 </template>
@@ -19,7 +19,8 @@ export default defineComponent({
   },
   props: {
     tarefa: {
-      type: Object as PropType<ITarefa>
+      type: Object as PropType<ITarefa>,
+      required: true
     }
   }
 });
