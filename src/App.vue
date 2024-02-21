@@ -16,6 +16,11 @@ export default defineComponent({
     return {
       tarefas: [] as ITarefa[]
     }
+  },
+  methods: {
+    salvarTarefa (tarefa: ITarefa) {
+      this.tarefas.push(tarefa);
+    }
   }
 });
 </script>
@@ -26,9 +31,9 @@ export default defineComponent({
       <BarraLateral />
     </div>
     <div class="column is-three-quarter">
-      <Form />
+      <Form @aoSalvarTarefa="salvarTarefa" />
       <div class="lista">
-        <Tarefa />
+        <Tarefa v-for="(tarefa, index) in tarefas" :key="index"/>
       </div>
     </div>
   </main>

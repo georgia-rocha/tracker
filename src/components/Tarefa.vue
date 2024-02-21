@@ -8,14 +8,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, PropType } from "vue";
 import Cronometro from "./Cronometro.vue";
+import ITarefa from "../interfaces/ITarefa"
 
 export default defineComponent({
   name: "Tarefa",
   components: {
     Cronometro,
   },
+  props: {
+    tarefa: {
+      type: Object as PropType<ITarefa>
+    }
+  }
 });
 </script>
 
