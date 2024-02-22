@@ -1,8 +1,8 @@
 <template>
   <div class="box">
     <div class="tarefa">
-      <h1 class="">{{tarefa.description || 'Tarefa sem Descrição'}}</h1>
-      <Cronometro :tempoEmSegundos="tarefa.duracaoEmSegundos" />
+      <h1>{{tarefa.description || 'Tarefa sem Descrição'}}</h1>
+      <Cronometro :tempoEmSegundos="tarefa.duracaoEmSegundos"  corDoTexto="black"/>
     <div class="apagar-tarefa" @click="excluirTarefa">APAGAR</div>
     </div>
   </div>
@@ -43,4 +43,5 @@ export default defineComponent({
 .apagar-tarefa{
   color: red
 }
+
 </style>

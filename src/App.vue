@@ -68,7 +68,7 @@ export default defineComponent({
 }
 main {
   --bg-primario: #fff;
-  --text-primary: #000;
+  --text-primary: black;
 }
 main.modo-escuro {
   --bg-primario: #010f2b;
