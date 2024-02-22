@@ -2,9 +2,15 @@
   <div class="is-flex is-align-items-center is-justify-content-space-between">
     <Cronometro :tempoEmSegundos="tempoEmSegundos" />
     <button class="button" @click="iniciar" :disabled="cronometroAtivo">
+      <span class="icon">
+        <i class="fas fa-play"></i>
+      </span>
       <span>play</span>
     </button>
     <button class="button" @click="finalizar" :disabled="!cronometroAtivo">
+      <span class="icon">
+        <i class="fas fa-stop"></i>
+      </span>
       <span>stop</span>
     </button>
   </div>
@@ -57,4 +63,9 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.temporizador {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
 </style>
