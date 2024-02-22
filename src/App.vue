@@ -31,7 +31,10 @@ export default defineComponent({
     },
     trocarTema(modoEscuroAtivo: boolean) {
       this.modoEscuroAtivo = modoEscuroAtivo
-    }
+    },
+    excluirTarefa(index: number) {
+      this.tarefas.splice(index, 1);
+    },
   },
 });
 </script>
@@ -48,6 +51,7 @@ export default defineComponent({
           v-for="(tarefa, index) in tarefas"
           :key="index"
           :tarefa="tarefa"
+          @excluirTarefa="excluirTarefa(index)"
         />
         <Box v-if="listaEstaVazia">
           VOCÊ NÃO INICIOU NENHUMA ATIVIDADE HOJE! :(
