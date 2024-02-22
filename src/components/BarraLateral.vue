@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>
-      <img src="../assets/farm.png" alt="logo">
+      <img src="../assets/project.png" alt="logo">
     </h1>
     <button class="button" @click="alterarTema">
     {{textoButton}}
@@ -48,7 +48,9 @@ header {
 
 .button {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 0.6rem;
+  border-radius: 1rem;
+   box-shadow: 0 0 10px rgba(224, 221, 221, 0.534);
 }
 
 @media only screen and (max-width: 768px) {
