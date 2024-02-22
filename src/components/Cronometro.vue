@@ -1,6 +1,6 @@
 <template>
   <section>
-    <strong>{{ tempoDecorrido }}</strong>
+    <strong class="">{{ tempoDecorrido }}</strong>
   </section>
 </template>
 

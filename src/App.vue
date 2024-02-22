@@ -33,11 +33,11 @@ export default defineComponent({
 </script>
 
 <template>
-  <main class="columns is-gapless is-multiline">
+  <main class="columns is-gapless is-multiline modo-escuro">
     <div class="column is-one-quarter">
       <BarraLateral />
     </div>
-    <div class="column is-three-quarter">
+    <div class="column is-three-quarter conteudo">
       <Form @aoSalvarTarefa="salvarTarefa" />
       <div class="lista">
         <Tarefa
@@ -54,8 +54,20 @@ export default defineComponent({
 </template>
 
 
-<style scoped>
+<style>
 .lista {
   padding: 0.5rem;
+}
+main {
+  --bg-primario: #fff;
+  --text-primary: #000;
+}
+main.modo-escuro {
+  --bg-primario: #010f2b;
+  --text-primary: #ddd;
+}
+.conteudo {
+  background-color: var(--bg-primario);
+  color: var(--text-primary);
 }
 </style>
