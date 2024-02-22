@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <div class="tarefa">
-      <h1 class="">{{tarefa.description}}</h1>
+      <h1 class="">{{tarefa.description || 'Tarefa sem descrição'}}</h1>
       <Cronometro :tempoEmSegundos="tarefa.duracaoEmSegundos" />
     </div>
   </div>
